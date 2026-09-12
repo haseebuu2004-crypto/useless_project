@@ -256,9 +256,8 @@ flowchart TD
 
 ## Team Contributions
 
-- [ADD TEAM MEMBER 1]: [Specific contributions - e.g., Frontend UX, Courtroom Components & Animation]
-- [ADD TEAM MEMBER 2]: [Specific contributions - e.g., MediaPipe Pose Vision Pipeline & Temporal Detector]
-- [ADD TEAM MEMBER 3]: [Specific contributions - e.g., Express Backend, Gemini AI Judge Provider & Session Engine]
+- Aban Faruk: Project Lead & Architecture, Frontend UI/UX, Courtroom Typography & Redesign System.
+- Haseeb: Computer Vision Engine (MediaPipe Pose WebAssembly), Express REST API Backend, Gemini AI Judge & Narrator Provider.
 
 ---
 
