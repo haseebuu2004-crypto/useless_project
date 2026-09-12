@@ -1,8 +1,8 @@
 {
   "version": 2,
   "framework": "vite",
-  "buildCommand": "npm run build --prefix frontend",
-  "outputDirectory": "frontend/dist",
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/(.*)",
