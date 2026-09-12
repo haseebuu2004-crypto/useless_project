@@ -10,12 +10,13 @@ dotenv.config();
 export const app = express();
 
 app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps, curl, postman) or any domain
-    callback(null, true);
-  },
+  origin: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
   credentials: true
 }));
+
+app.options("*", cors());
 
 app.use(express.json({ limit: "100kb" }));
 

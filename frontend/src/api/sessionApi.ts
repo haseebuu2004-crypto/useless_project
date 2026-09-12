@@ -1,11 +1,14 @@
 import { TribunalSession, CaseSubmission, EvidenceItem, CreateEvidenceInput, JudgeStatusResponse } from "../types/index.js";
 
-const BASE_URL = (import.meta as any).env?.VITE_API_URL !== undefined 
+const RAW_BASE_URL = (import.meta as any).env?.VITE_API_URL !== undefined 
   ? (import.meta as any).env.VITE_API_URL 
   : ((import.meta as any).env?.DEV ? 'http://localhost:3000' : '');
 
+const BASE_URL = typeof RAW_BASE_URL === 'string' ? RAW_BASE_URL.replace(/\/+$/, '') : '';
+
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
-  const res = await fetch(`${BASE_URL}${path}`, {
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  const res = await fetch(`${BASE_URL}${normalizedPath}`, {
     headers: {
       'Content-Type': 'application/json',
       ...options?.headers,
