@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
+// Vercel Standalone Frontend Build Config - Output to frontend/dist
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
