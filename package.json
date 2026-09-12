@@ -4,21 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build && cd .. && node -e \"const fs=require('fs'); fs.cpSync('frontend/dist', 'dist', {recursive: true});\"",
+    "build": "cd frontend && npm install && npm run build",
     "start": "cd backend && npm start",
     "dev": "cd backend && npm run dev"
-  },
-  "dependencies": {
-    "@google/genai": "^2.4.0",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^4.21.2"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/node": "^22.14.0",
-    "@vercel/node": "^5.1.10",
-    "typescript": "~5.8.2"
   }
 }
